@@ -34,7 +34,7 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
-    turn_num += 1
+    turn_count += 1
   else
     turn(board)
   end

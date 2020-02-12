@@ -36,7 +36,7 @@ def turn(board)
 end
 
 def play(board)
-  until play > 10
+  until play(board) > 10
     turn(board)
   end
-end 
+end

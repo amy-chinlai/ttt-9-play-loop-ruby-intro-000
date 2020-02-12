@@ -23,9 +23,6 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def turn_count
-  count = 0
-end
 
 def turn(board)
   puts "Please enter 1-9:"
@@ -34,7 +31,6 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index)
     display_board(board)
-    turn_count += 1
   else
     turn(board)
   end
@@ -42,7 +38,8 @@ end
 
 
 def play(board)
-  while board.turn_count < 9
+  turn_count = 0
+  while turn_count < 0
     turn(board)
   end
 end

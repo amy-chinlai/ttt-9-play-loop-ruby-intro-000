@@ -38,7 +38,7 @@ def turn(board)
 end
 
 def play(board)
-  while turn_num < 10
+  while board.turn_count < 9
     turn(board)
   end
 end
